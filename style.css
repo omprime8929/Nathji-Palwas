@@ -1,0 +1,18 @@
+
+body { margin: 0; font-family: Arial, sans-serif; background: #fff8f0; color: #333; }
+nav { background: #e65c00; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+nav ul { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+nav ul li a:hover { text-decoration: underline; }
+header { text-align: center; padding: 3rem 1rem; background: #fff0e0; }
+h1, h2, h3 { color: #cc5200; }
+footer { background: #e65c00; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+.container { max-width: 1000px; margin: auto; padding: 1rem; }
+.grid { display: grid; gap: 1rem; }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.card { background: #fff; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+img { width: 100%; border-radius: 10px; }
+button { background: #e65c00; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; }
+button:hover { background: #cc5200; }
+form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
