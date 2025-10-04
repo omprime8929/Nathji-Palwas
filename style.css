@@ -23,31 +23,46 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
     text-align: center;
 }
 
+/* --- FINAL CORRECTED CSS FOR MAHANT INTRO --- */
+
+#mahant-intro {
+    padding: 40px 20px;
+    text-align: center;
+}
+
 #mahant-intro h2 {
     margin-bottom: 25px;
     font-size: 1.8em;
-    color: #cc5200; /* Use your existing heading color */
+    color: #cc5200; 
 }
 
+/* CRUCIAL CONTAINER: Makes photo and text side-by-side */
 .mahant-details {
-    display: flex; /* Makes photo and text side-by-side */
-    gap: 30px;
-    align-items: center;
+    display: flex; /* Makes immediate children (photo & text divs) side-by-side */
+    gap: 30px; 
+    align-items: flex-start; /* Ensures content aligns cleanly at the top */
     text-align: left;
-    max-width: 900px; /* Limits the width of the intro block */
-    margin: 0 auto; /* Centers the intro block */
+    max-width: 900px; 
+    margin: 0 auto; 
 }
 
 .mahant-photo {
-    flex-basis: 250px; /* Fixes the photo size */
-    flex-shrink: 0; /* Prevents photo from shrinking */
+    flex-basis: 200px; /* Photo column will be 200px wide */
+    flex-shrink: 0; /* Prevents the photo column from shrinking */
 }
 
 .mahant-photo img {
     width: 100%;
     height: auto;
-    border: 5px solid #ff5722; /* Orange border around photo */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Clean Square/Rectangle Look */
+    border-radius: 8px; /* Slight roundness */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
+    /* REMOVED: Red Border */
+}
+
+.mahant-text {
+    /* Text column uses the remaining space and handles text wrap naturally */
+    flex-grow: 1; 
 }
 
 .mahant-text h3 {
@@ -55,7 +70,7 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
     color: #ff5722;
 }
 
-/* Mobile Responsiveness for Mahant Section */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .mahant-details {
         flex-direction: column; /* Stacks photo and text vertically on mobile */
@@ -65,6 +80,7 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
         margin-bottom: 20px;
     }
 }
+
 
 
 /* --- 1. Tile Section Container --- */
