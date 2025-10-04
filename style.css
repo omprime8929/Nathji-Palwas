@@ -187,3 +187,28 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
         margin: 10px 0;
     }
 }
+/* -------------------------------------------------------------------------- */
+/* FINAL HEADER CENTERING AND COLORING FIX (PASTE AT END OF style.css) */
+/* -------------------------------------------------------------------------- */
+
+header {
+    /* CRITICAL FIX: Forces all text content inside the header to be centered */
+    text-align: center !important;
+    padding: 20px 0 !important;
+}
+
+/* 1. Bhurnath Title Coloring (Orange) */
+.bhurnath-title {
+    color: #ff5722 !important; /* Orange color */
+    margin: 0 auto !important;
+    max-width: 900px !important;
+    font-size: 1.7rem !important; 
+}
+
+/* 2. Short Intro Text Coloring (Normal Dark Grey) */
+header p {
+    color: #333 !important; /* Normal dark text color */
+    font-style: italic !important;
+    margin: 5px auto 0 auto !important; /* Space below the title */
+    max-width: 900px !important;
+}
