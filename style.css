@@ -17,39 +17,37 @@ button { background: #e65c00; color: white; border: none; padding: 0.5rem 1rem; 
 button:hover { background: #cc5200; }
 form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
 /* -------------------------------------------------------------------------- */
-/* FORCED FIX: PASTE THIS AT THE VERY END OF YOUR style.css FILE */
+/* FORCED ID-BASED FIX: PASTE THIS AT THE VERY END OF YOUR style.css FILE */
 /* -------------------------------------------------------------------------- */
-.tile-section {
+
+/* Targetting the container wrapper by its ID */
+#quick-links {
     padding: 30px 20px !important; 
     text-align: center !important;
     background-color: #f7f7f7 !important; 
+    width: 100% !important;
 }
 
-.tile-section h2 {
-    margin-bottom: 25px !important;
-    color: #333 !important;
-}
-
-.tile-container {
+/* Targetting the tile wrapper by ID and class */
+#quick-links .tile-container {
     display: grid !important;
-    /* Sets the 3-column horizontal layout and forces the width */
     grid-template-columns: 1fr 1fr 1fr !important; 
     gap: 30px !important; 
     
-    /* Centers the tile group and forces a wide width (1200px) */
+    /* Center the tile group and force wide width */
     max-width: 1200px !important; 
     margin: 0 auto !important; 
     padding: 0 !important; 
 }
 
-.tile {
+/* Targetting individual tiles */
+#quick-links .tile {
     text-decoration: none !important; 
     color: #333 !important; 
     padding: 15px !important; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; 
     border-radius: 8px !important;
     
-    /* Centers content vertically and horizontally */
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -57,26 +55,27 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
     height: 100% !important; 
 }
 
-.tile h3 {
+/* Targetting headings and icons */
+#quick-links .tile h3 {
     margin: 10px 0 5px 0 !important; 
     color: #ff5722 !important; 
     font-size: 1.2em !important;
 }
 
-.tile p {
+#quick-links .tile p {
     margin-top: 5px !important; 
     margin-bottom: 5px !important;
     font-size: 0.9em !important;
     color: #777 !important;
 }
 
-.tile i {
+#quick-links .tile i {
     margin-bottom: 8px !important;
 }
 
 /* Mobile Responsiveness (Forced) */
 @media (max-width: 768px) {
-    .tile-container {
+    #quick-links .tile-container {
         grid-template-columns: 1fr !important;
         gap: 20px !important; 
         padding: 0 15px !important;
