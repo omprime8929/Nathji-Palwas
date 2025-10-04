@@ -222,3 +222,82 @@ header p {
     margin: 5px auto 0 auto !important; /* Space below the title */
     max-width: 900px !important;
 }
+/* -------------------------------------------------------------------------- */
+/* 1. FINAL HEADER NAVIGATION AND LOGO FIX (PASTE AT END OF style.css) */
+/* -------------------------------------------------------------------------- */
+
+nav.main-nav {
+    /* White background with light bottom line */
+    background-color: #ffffff !important; 
+    border-bottom: 1px solid #eee !important; 
+    padding: 1rem 0 !important;
+    
+    /* CRITICAL FIX: Center the header content (Title + Links) */
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important; 
+}
+
+/* Style for the main title/logo (Bigger Size and New Font) */
+.nav-header h2 {
+    color: #ff5722 !important; 
+    font-size: 2.8rem !important; /* Bigger Size */
+    font-weight: 700 !important;
+    margin: 0 0 0.75rem 0 !important; 
+    text-align: center !important;
+    font-family: 'Karma', serif !important; /* New Font */
+}
+
+/* Styling the navigation links */
+ul.nav-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    gap: 25px !important; 
+}
+
+ul.nav-links li a {
+    color: #333 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    padding: 5px 10px !important;
+}
+
+ul.nav-links li a:hover {
+    color: #cc5200 !important; 
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2. FINAL BHURNATH JI TITLE AND INTRO TEXT FIX (PASTE AFTER BLOCK 1) */
+/* -------------------------------------------------------------------------- */
+
+header {
+    /* Forces the whole header content area to be centered */
+    text-align: center !important;
+    padding: 20px 0 !important;
+}
+
+/* Bhurnath Title Coloring and Font */
+.bhurnath-title {
+    color: #ff5722 !important; /* Orange color */
+    margin: 0 auto !important;
+    max-width: 900px !important;
+    font-size: 1.7rem !important; 
+    font-family: 'Karma', serif !important; /* New Font */
+}
+
+/* Lamba Intro Text Styling (Smaller Size and Left-Aligned) */
+header p {
+    color: #333 !important; 
+    font-style: italic !important;
+    margin: 5px auto 0 auto !important; 
+    
+    /* FIX: Font Size Chota aur Systematic Left Alignment */
+    font-size: 1.05rem !important; 
+    text-align: left !important; /* Left Alignment */
+    line-height: 1.6 !important; /* Better Spacing */
+    
+    max-width: 900px !important; /* Ensures the text doesn't stretch too wide */
+}
+
