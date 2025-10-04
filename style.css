@@ -17,14 +17,19 @@ nav.main-nav {
     align-items: center; 
 }
 
-/* Style for the main title/logo area */
+
+/* Style for the main title/logo (Using Karma Font) */
 .nav-header h2 {
-    color: #ff5722; /* Your primary orange color */
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin: 0 0 0.5rem 0; /* Space below the title */
-    text-align: center;
+    color: #ff5722 !important; 
+    font-size: 2.8rem !important; 
+    font-weight: 700 !important;
+    margin: 0 0 0.75rem 0 !important; 
+    text-align: center !important;
+    
+    /* 🚨 CRITICAL FIX: Applying the new font */
+    font-family: 'Karma', serif !important; 
 }
+
 
 /* Styling the navigation links (Home, Saints, etc.) */
 ul.nav-links {
@@ -197,12 +202,17 @@ header {
     padding: 20px 0 !important;
 }
 
-/* 1. Bhurnath Title Coloring (Orange) */
+/* 1. Bhurnath Title Coloring (Applying Karma Font) */
 .bhurnath-title {
-    color: #ff5722 !important; /* Orange color */
+    color: #ff5722 !important; 
     margin: 0 auto !important;
     max-width: 900px !important;
     font-size: 1.7rem !important; 
+    
+    /* 🚨 CRITICAL FIX: Applying the new font */
+    font-family: 'Karma', serif !important;
+}
+
 }
 
 /* 2. Short Intro Text Coloring (Normal Dark Grey) */
