@@ -16,3 +16,68 @@ img { width: 100%; border-radius: 10px; }
 button { background: #e65c00; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; }
 button:hover { background: #cc5200; }
 form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
+
+/* --- 1. Tile Section Container --- */
+.tile-section {
+    padding: 30px 15px; 
+    text-align: center;
+    background-color: #f8f8f8; 
+}
+
+.tile-section h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* --- 2. Tile Layout (Using Flexbox) --- */
+.tile-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+/* --- 3. Individual Tile Design --- */
+.tile {
+    flex-basis: 250px; 
+    flex-grow: 1; 
+    padding: 25px 20px;
+    margin: 10px;
+    
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none; 
+    color: #555;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+}
+
+/* --- 4. Hover Effect --- */
+.tile:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 5. Tile Typography --- */
+.tile h3 {
+    margin: 10px 0;
+    color: #ff5722; 
+    font-size: 1.2em;
+}
+
+.tile p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* --- 6. Mobile Responsiveness (Optional but Recommended) --- */
+@media (max-width: 600px) {
+    .tile {
+        flex-basis: 90%; 
+        margin: 10px 0;
+    }
+}
+
