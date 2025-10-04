@@ -17,11 +17,13 @@ button { background: #e65c00; color: white; border: none; padding: 0.5rem 1rem; 
 button:hover { background: #cc5200; }
 form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
 
-/* --- 1. Tile Section Container --- */
+/* -------------------------------------------------------------------------- */
+/* 1. Tile Section Container (The wrapper for the whole section) */
+/* -------------------------------------------------------------------------- */
 .tile-section {
-    padding: 30px 15px; 
+    padding: 30px 20px; /* Adjusted padding to look better */
     text-align: center;
-    background-color: #f8f8f8; 
+    background-color: #f7f7f7; /* Light off-white background */
 }
 
 .tile-section h2 {
@@ -30,70 +32,72 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
 }
 
 /* -------------------------------------------------------------------------- */
-/* 1. Tile Container Layout (CSS Grid - 3 columns) */
+/* 2. Tile Container Layout (CSS Grid - 3 columns, fills the page center) */
 /* -------------------------------------------------------------------------- */
 .tile-container {
     display: grid;
-    /* Sets the 3-column horizontal layout and fills the width */
+    /* Sets the 3-column horizontal layout */
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 30px; 
+    
+    /* Crucial: Centers the tile group and defines its overall width */
     max-width: 1200px; 
     margin: 0 auto; 
-    padding: 30px 20px; 
+    padding: 0; /* Remove extra padding here */
 }
 
 /* -------------------------------------------------------------------------- */
-/* 2. Individual Tile Styling */
+/* 3. Individual Tile Styling */
 /* -------------------------------------------------------------------------- */
 .tile {
+    /* Ensures the tile is treated as a block that fills the grid column */
     text-decoration: none; 
     color: #333; 
+    
+    /* Visuals and Spacing */
     padding: 15px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
-    
-    /* Centers content vertically and horizontally */
     text-align: center; 
+    
+    /* Centers all content (Icon, Heading, Text) */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    /* Ensures tile content uses the full height available in the grid row */
+    height: 100%; 
 }
 
-/* 3. Content Spacing */
-.tile h3, .tile p {
-    margin-top: 5px; 
-    margin-bottom: 5px;
-}
-
-.tile i {
-    margin-bottom: 8px;
-}
-
-
-/* --- 4. Hover Effect --- */
-.tile:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* --- 5. Tile Typography --- */
+/* -------------------------------------------------------------------------- */
+/* 4. Content Spacing and Typography */
+/* -------------------------------------------------------------------------- */
 .tile h3 {
-    margin: 10px 0;
-    color: #ff5722; 
+    margin: 10px 0 5px 0; /* Top, Right/Left, Bottom */
+    color: #ff5722; /* Use your main accent color */
     font-size: 1.2em;
 }
 
 .tile p {
+    margin-top: 5px; 
+    margin-bottom: 5px;
     font-size: 0.9em;
     color: #777;
 }
 
-/* --- 6. Mobile Responsiveness (Optional but Recommended) --- */
-@media (max-width: 600px) {
-    .tile {
-        flex-basis: 90%; 
-        margin: 10px 0;
-    }
+.tile i {
+    margin-bottom: 8px; /* Space below the icon */
 }
 
+/* -------------------------------------------------------------------------- */
+/* 5. Mobile Responsiveness (Recommended) */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .tile-container {
+        /* On small screens, stack tiles vertically */
+        grid-template-columns: 1fr;
+        gap: 20px; 
+        padding: 0 15px;
+    }
+}
