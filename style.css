@@ -16,17 +16,13 @@ img { width: 100%; border-radius: 10px; }
 button { background: #e65c00; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; }
 button:hover { background: #cc5200; }
 form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
-
 /* -------------------------------------------------------------------------- */
-/* 1. Tile Section Container (The wrapper for the whole section) */
+/* FORCED FIX: PASTE THIS AT THE VERY END OF YOUR style.css FILE */
 /* -------------------------------------------------------------------------- */
 .tile-section {
     padding: 30px 20px !important; 
     text-align: center !important;
     background-color: #f7f7f7 !important; 
-    /* Ensuring full width */
-    width: 100% !important;
-    box-sizing: border-box !important;
 }
 
 .tile-section h2 {
@@ -34,33 +30,24 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
     color: #333 !important;
 }
 
-/* -------------------------------------------------------------------------- */
-/* 2. Tile Container Layout (CSS Grid - FORCED FIX) */
-/* -------------------------------------------------------------------------- */
 .tile-container {
     display: grid !important;
     /* Sets the 3-column horizontal layout and forces the width */
     grid-template-columns: 1fr 1fr 1fr !important; 
     gap: 30px !important; 
     
-    /* Crucial: Centers the tile group and forces a wide width */
+    /* Centers the tile group and forces a wide width (1200px) */
     max-width: 1200px !important; 
     margin: 0 auto !important; 
     padding: 0 !important; 
 }
 
-/* -------------------------------------------------------------------------- */
-/* 3. Individual Tile Styling (FORCED FIX) */
-/* -------------------------------------------------------------------------- */
 .tile {
     text-decoration: none !important; 
     color: #333 !important; 
-    
-    /* Visuals and Spacing */
     padding: 15px !important; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; 
     border-radius: 8px !important;
-    text-align: center !important; 
     
     /* Centers content vertically and horizontally */
     display: flex !important;
@@ -70,7 +57,6 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
     height: 100% !important; 
 }
 
-/* 4. Content Spacing */
 .tile h3 {
     margin: 10px 0 5px 0 !important; 
     color: #ff5722 !important; 
@@ -88,12 +74,12 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
     margin-bottom: 8px !important;
 }
 
-/* 5. Mobile Responsiveness */
+/* Mobile Responsiveness (Forced) */
 @media (max-width: 768px) {
     .tile-container {
-        /* On small screens, stack tiles vertically */
         grid-template-columns: 1fr !important;
         gap: 20px !important; 
         padding: 0 15px !important;
     }
 }
+
