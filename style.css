@@ -18,68 +18,111 @@ button:hover { background: #cc5200; }
 form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
 
 /* -------------------------------------------------------------------------- */
-/* FORCED ID-BASED FIX: PASTE THIS AT THE VERY END OF YOUR style.css FILE */
+/* Global Reset and Body Styling */
 /* -------------------------------------------------------------------------- */
-
-/* Targetting the main section wrapper */
-#quick-links {
-    padding: 30px 20px !important; 
-    text-align: center !important;
-    background-color: #f7f7f7 !important; 
-    width: 100% !important; /* Ensuring full width */
+body {
+    /* Basic font and background */
+    font-family: sans-serif;
+    background-color: #f7f7f7; /* Light off-white background */
+    margin: 0;
+    padding: 0;
 }
 
-/* Targetting the tile wrapper by ID and class */
-#quick-links .tile-container {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr !important; /* FORCED 3-COLUMN */
-    gap: 30px !important; 
-    
-    /* Center the tile group and force wide width */
-    max-width: 1200px !important; 
-    margin: 0 auto !important; 
-    padding: 0 !important; 
+/* -------------------------------------------------------------------------- */
+/* Header and Navigation Bar Styling */
+/* -------------------------------------------------------------------------- */
+/* Ensures main content is centered on the page */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Targetting individual tiles */
-#quick-links .tile {
-    text-decoration: none !important; 
-    color: #333 !important; 
-    padding: 15px !important; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; 
-    border-radius: 8px !important;
-    
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    height: 100% !important; 
+nav {
+    background-color: #ff5722; /* Your orange color */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Targetting content spacing */
-#quick-links .tile h3 {
-    margin: 10px 0 5px 0 !important; 
-    color: #ff5722 !important; 
-    font-size: 1.2em !important;
+/* Add more styling for the navigation links (ul, li, a) as needed */
+
+
+/* -------------------------------------------------------------------------- */
+/* Image Grid / Saints Section (Adjusted for 3 images in a row) */
+/* -------------------------------------------------------------------------- */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    /* Sets up 3 equal columns for the images */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
 }
 
-#quick-links .tile p {
-    margin-top: 5px !important; 
-    margin-bottom: 5px !important;
-    font-size: 0.9em !important;
-    color: #777 !important;
+.container img {
+    width: 100%; /* Makes image fill the grid column */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#quick-links .tile i {
-    margin-bottom: 8px !important;
+
+/* -------------------------------------------------------------------------- */
+/* Tile Section Layout (Quick Links) */
+/* -------------------------------------------------------------------------- */
+.tile-section {
+    padding: 30px 15px;
+    text-align: center;
+    background-color: #f7f7f7;
 }
 
-/* Mobile Responsiveness (Forced) */
-@media (max-width: 768px) {
-    #quick-links .tile-container {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important; 
-        padding: 0 15px !important;
-    }
+.tile-container {
+    display: grid;
+    /* Sets the 3-column horizontal layout */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 30px 20px; 
+}
+
+/* Individual Tile Styling */
+.tile {
+    text-decoration: none; 
+    color: #333; 
+    padding: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content Spacing */
+.tile h3, .tile p {
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+.tile i {
+    margin-bottom: 8px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Footer Styling (Ensure it sticks to the bottom) */
+/* -------------------------------------------------------------------------- */
+footer {
+    background-color: #ff5722; /* Your orange color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 40px; /* Space above footer */
 }
 
