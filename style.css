@@ -30,20 +30,20 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
 }
 
 /* -------------------------------------------------------------------------- */
-/* NEW: Tile Container Layout (CSS Grid - 3 columns) */
+/* 1. Tile Container Layout (CSS Grid - 3 columns) */
 /* -------------------------------------------------------------------------- */
 .tile-container {
     display: grid;
-    /* Sets the 3-column horizontal layout to fill the width */
+    /* Sets the 3-column horizontal layout and fills the width */
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 30px; 
-    max-width: 1200px; /* Controls the overall width of the tile section */
-    margin: 0 auto; /* Centers the container */
+    max-width: 1200px; 
+    margin: 0 auto; 
     padding: 30px 20px; 
 }
 
 /* -------------------------------------------------------------------------- */
-/* NEW: Individual Tile Styling */
+/* 2. Individual Tile Styling */
 /* -------------------------------------------------------------------------- */
 .tile {
     text-decoration: none; 
@@ -51,22 +51,21 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
     padding: 15px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
-    text-align: center; 
     
-    /* Centers content vertically and horizontally within the tile */
+    /* Centers content vertically and horizontally */
+    text-align: center; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Reduce spacing on content inside the tile for a more compact look */
+/* 3. Content Spacing */
 .tile h3, .tile p {
     margin-top: 5px; 
     margin-bottom: 5px;
 }
 
-/* Space below the icon */
 .tile i {
     margin-bottom: 8px;
 }
