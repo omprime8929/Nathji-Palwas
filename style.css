@@ -295,7 +295,7 @@ header p {
     
     /* FIX: Font Size Chota aur Systematic Left Alignment */
     font-size: 0.5rem !important; 
-    text-align: left !important; /* Left Alignment */
+    text-align: center !important; /* Left Alignment */
     line-height: 1.6 !important; /* Better Spacing */
     
     max-width: 900px !important; /* Ensures the text doesn't stretch too wide */
