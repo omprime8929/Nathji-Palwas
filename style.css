@@ -21,83 +21,79 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
 /* 1. Tile Section Container (The wrapper for the whole section) */
 /* -------------------------------------------------------------------------- */
 .tile-section {
-    padding: 30px 20px; /* Adjusted padding to look better */
-    text-align: center;
-    background-color: #f7f7f7; /* Light off-white background */
+    padding: 30px 20px !important; 
+    text-align: center !important;
+    background-color: #f7f7f7 !important; 
+    /* Ensuring full width */
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 .tile-section h2 {
-    margin-bottom: 25px;
-    color: #333;
+    margin-bottom: 25px !important;
+    color: #333 !important;
 }
 
 /* -------------------------------------------------------------------------- */
-/* 2. Tile Container Layout (CSS Grid - 3 columns, fills the page center) */
+/* 2. Tile Container Layout (CSS Grid - FORCED FIX) */
 /* -------------------------------------------------------------------------- */
 .tile-container {
-    display: grid;
-    /* Sets the 3-column horizontal layout */
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 30px; 
+    display: grid !important;
+    /* Sets the 3-column horizontal layout and forces the width */
+    grid-template-columns: 1fr 1fr 1fr !important; 
+    gap: 30px !important; 
     
-    /* Crucial: Centers the tile group and defines its overall width */
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0; /* Remove extra padding here */
+    /* Crucial: Centers the tile group and forces a wide width */
+    max-width: 1200px !important; 
+    margin: 0 auto !important; 
+    padding: 0 !important; 
 }
 
 /* -------------------------------------------------------------------------- */
-/* 3. Individual Tile Styling */
+/* 3. Individual Tile Styling (FORCED FIX) */
 /* -------------------------------------------------------------------------- */
 .tile {
-    /* Ensures the tile is treated as a block that fills the grid column */
-    text-decoration: none; 
-    color: #333; 
+    text-decoration: none !important; 
+    color: #333 !important; 
     
     /* Visuals and Spacing */
-    padding: 15px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px;
-    text-align: center; 
+    padding: 15px !important; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; 
+    border-radius: 8px !important;
+    text-align: center !important; 
     
-    /* Centers all content (Icon, Heading, Text) */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    /* Ensures tile content uses the full height available in the grid row */
-    height: 100%; 
+    /* Centers content vertically and horizontally */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important; 
 }
 
-/* -------------------------------------------------------------------------- */
-/* 4. Content Spacing and Typography */
-/* -------------------------------------------------------------------------- */
+/* 4. Content Spacing */
 .tile h3 {
-    margin: 10px 0 5px 0; /* Top, Right/Left, Bottom */
-    color: #ff5722; /* Use your main accent color */
-    font-size: 1.2em;
+    margin: 10px 0 5px 0 !important; 
+    color: #ff5722 !important; 
+    font-size: 1.2em !important;
 }
 
 .tile p {
-    margin-top: 5px; 
-    margin-bottom: 5px;
-    font-size: 0.9em;
-    color: #777;
+    margin-top: 5px !important; 
+    margin-bottom: 5px !important;
+    font-size: 0.9em !important;
+    color: #777 !important;
 }
 
 .tile i {
-    margin-bottom: 8px; /* Space below the icon */
+    margin-bottom: 8px !important;
 }
 
-/* -------------------------------------------------------------------------- */
-/* 5. Mobile Responsiveness (Recommended) */
-/* -------------------------------------------------------------------------- */
+/* 5. Mobile Responsiveness */
 @media (max-width: 768px) {
     .tile-container {
         /* On small screens, stack tiles vertically */
-        grid-template-columns: 1fr;
-        gap: 20px; 
-        padding: 0 15px;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important; 
+        padding: 0 15px !important;
     }
 }
