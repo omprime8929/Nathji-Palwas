@@ -29,31 +29,48 @@ form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; b
     color: #333;
 }
 
-/* --- 2. Tile Layout (Using Flexbox) --- */
+/* -------------------------------------------------------------------------- */
+/* NEW: Tile Container Layout (CSS Grid - 3 columns) */
+/* -------------------------------------------------------------------------- */
 .tile-container {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 20px; 
-    max-width: 1100px; 
-    margin: 0 auto; 
+    display: grid;
+    /* Sets the 3-column horizontal layout to fill the width */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 30px; 
+    max-width: 1200px; /* Controls the overall width of the tile section */
+    margin: 0 auto; /* Centers the container */
+    padding: 30px 20px; 
 }
 
-/* --- 3. Individual Tile Design --- */
+/* -------------------------------------------------------------------------- */
+/* NEW: Individual Tile Styling */
+/* -------------------------------------------------------------------------- */
 .tile {
-    flex-basis: 250px; 
-    flex-grow: 1; 
-    padding: 25px 20px;
-    margin: 10px;
-    
-    background-color: #fff;
-    border-radius: 10px;
-    text-align: center;
     text-decoration: none; 
-    color: #555;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    transition: all 0.3s ease; 
+    color: #333; 
+    padding: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    text-align: center; 
+    
+    /* Centers content vertically and horizontally within the tile */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Reduce spacing on content inside the tile for a more compact look */
+.tile h3, .tile p {
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+/* Space below the icon */
+.tile i {
+    margin-bottom: 8px;
+}
+
 
 /* --- 4. Hover Effect --- */
 .tile:hover {
