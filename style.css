@@ -1,11 +1,52 @@
 
 body { margin: 0; font-family: Arial, sans-serif; background: #fff8f0; color: #333; }
 nav { background: #e65c00; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
-nav ul { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
-nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-nav ul li a:hover { text-decoration: underline; }
-header { text-align: center; padding: 3rem 1rem; background: #fff0e0; }
-h1, h2, h3 { color: #cc5200; }
+/* -------------------------------------------------------------------------- */
+/* NEW: Clean, Centered Header Styling (Replace Lines 4-8) */
+/* -------------------------------------------------------------------------- */
+
+nav.main-nav {
+    /* Set up the overall navigation space */
+    background-color: #ffffff; /* White background */
+    border-bottom: 1px solid #eee; /* Light line below the header */
+    padding: 1rem 0;
+    
+    /* Center the header content (Title + Links) */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Style for the main title/logo area */
+.nav-header h2 {
+    color: #ff5722; /* Your primary orange color */
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0; /* Space below the title */
+    text-align: center;
+}
+
+/* Styling the navigation links (Home, Saints, etc.) */
+ul.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Makes links horizontal */
+    gap: 25px; /* Space between links */
+}
+
+ul.nav-links li a {
+    color: #333; /* Dark color for links */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+ul.nav-links li a:hover {
+    color: #ff5722; /* Orange color on hover */
+}
+
 footer { background: #e65c00; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
 .container { max-width: 1000px; margin: auto; padding: 1rem; }
 .grid { display: grid; gap: 1rem; }
