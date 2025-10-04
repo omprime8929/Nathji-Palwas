@@ -294,7 +294,7 @@ header p {
     margin: 5px auto 0 auto !important; 
     
     /* FIX: Font Size Chota aur Systematic Left Alignment */
-    font-size: 1.05rem !important; 
+    font-size: 0.5rem !important; 
     text-align: left !important; /* Left Alignment */
     line-height: 1.6 !important; /* Better Spacing */
     
