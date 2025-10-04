@@ -17,72 +17,8 @@ button { background: #e65c00; color: white; border: none; padding: 0.5rem 1rem; 
 button:hover { background: #cc5200; }
 form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
 
-/* -------------------------------------------------------------------------- */
-/* Global Reset and Body Styling */
-/* -------------------------------------------------------------------------- */
-body {
-    /* Basic font and background */
-    font-family: sans-serif;
-    background-color: #f7f7f7; /* Light off-white background */
-    margin: 0;
-    padding: 0;
-}
-
-/* -------------------------------------------------------------------------- */
-/* Header and Navigation Bar Styling */
-/* -------------------------------------------------------------------------- */
-/* Ensures main content is centered on the page */
-.main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-nav {
-    background-color: #ff5722; /* Your orange color */
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Add more styling for the navigation links (ul, li, a) as needed */
-
-
-/* -------------------------------------------------------------------------- */
-/* Image Grid / Saints Section (Adjusted for 3 images in a row) */
-/* -------------------------------------------------------------------------- */
-.container {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
-    display: grid;
-    /* Sets up 3 equal columns for the images */
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-}
-
-.container img {
-    width: 100%; /* Makes image fill the grid column */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-/* -------------------------------------------------------------------------- */
-/* Tile Section Layout (Quick Links) */
-/* -------------------------------------------------------------------------- */
-.tile-section {
-    padding: 30px 15px;
-    text-align: center;
-    background-color: #f7f7f7;
-}
-
 .tile-container {
     display: grid;
-    /* Sets the 3-column horizontal layout */
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 30px; 
     max-width: 1200px; 
@@ -90,7 +26,6 @@ nav {
     padding: 30px 20px; 
 }
 
-/* Individual Tile Styling */
 .tile {
     text-decoration: none; 
     color: #333; 
@@ -104,7 +39,6 @@ nav {
     align-items: center;
 }
 
-/* Content Spacing */
 .tile h3, .tile p {
     margin-top: 5px; 
     margin-bottom: 5px;
@@ -114,15 +48,10 @@ nav {
     margin-bottom: 8px;
 }
 
-/* -------------------------------------------------------------------------- */
-/* Footer Styling (Ensure it sticks to the bottom) */
-/* -------------------------------------------------------------------------- */
-footer {
-    background-color: #ff5722; /* Your orange color */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    margin-top: 40px; /* Space above footer */
+@media (max-width: 768px) {
+    .tile-container {
+        grid-template-columns: 1fr;
+        gap: 20px; 
+        padding: 20px 15px;
+    }
 }
-
