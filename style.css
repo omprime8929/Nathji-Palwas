@@ -300,4 +300,46 @@ header p {
     
     max-width: 900px !important; /* Ensures the text doesn't stretch too wide */
 }
+/* -------------------------------------------------------------------------- */
+/* NEW: SAINT CARD STYLING (For saints.html) */
+/* -------------------------------------------------------------------------- */
+
+.saint-card {
+    /* Inherits padding, shadow, and hover from the existing .tile class */
+    text-align: center !important; 
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.saint-photo {
+    width: 100% !important; /* Photo poore tile ki width le */
+    max-width: 180px !important; /* Photo ko bahut bada hone se roke */
+    height: auto !important;
+    object-fit: cover !important; /* Photo ko crop karke fit kare */
+    
+    /* Photo ko Gol (Round) look dene ke liye: */
+    border-radius: 4px!important; 
+    border: 4px solid #cc5200 !important; /* Orange border for appeal */
+    margin-bottom: 15px !important;
+}
+
+.saint-card h2 {
+    color: #cc5200 !important; /* Saint ka naam orange mein */
+    font-size: 1.3rem !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.saint-card p {
+    color: #777 !important; /* Choti description ka color */
+    font-size: 0.9rem !important;
+}
+
+/* Ensure the hover effect works well on the image */
+.saint-card:hover .saint-photo {
+    transform: scale(1.05); /* Hover karne par photo thodi badi ho */
+    transition: transform 0.3s ease;
+}
 
