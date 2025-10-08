@@ -342,4 +342,132 @@ header p {
     transform: scale(1.05); /* Hover karne par photo thodi badi ho */
     transition: transform 0.3s ease;
 }
+/* -------------------------------------------------------------------------- */
+/* NEW: JIVANI PAGE PROFESSIONAL STYLING (Image Placement & Typography) */
+/* -------------------------------------------------------------------------- */
+
+/* Jivani Page Title and Headings */
+.jivani-content-section {
+    padding: 3rem 1rem; /* Overall section padding */
+}
+
+.jivani-title {
+    text-align: center;
+    color: #cc5200;
+    font-size: 2.5rem; /* Larger Title */
+    margin-bottom: 0.5rem;
+    font-family: 'Karma', serif;
+}
+
+.jivani-subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.title-separator {
+    border-top: 1px solid #ccc;
+    margin-bottom: 2rem;
+}
+
+.main-subheading {
+    color: #ff5722;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    font-family: 'Karma', serif;
+    font-weight: 700;
+}
+
+.sub-heading-small {
+    color: #cc5200;
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    font-weight: 700;
+}
+
+.jivani-paragraph {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    text-align: justify;
+    margin-bottom: 1.25rem;
+}
+
+.jivani-jai-text {
+    text-align: center;
+    color: #ff5722;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    font-weight: 800;
+}
+
+
+/* --- Image and Introduction Text Wrapper --- */
+
+.intro-image-wrapper {
+    display: flex; /* Flex container for image and text */
+    flex-direction: column; /* Mobile: Image above text */
+    gap: 2rem; /* Spacing between elements */
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+.jivani-image-box {
+    width: 100%; /* Mobile full width */
+    max-width: 300px;
+    margin: 0 auto; /* Center on mobile */
+    text-align: center;
+}
+
+.jivani-main-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    
+    /* Square/Clean look */
+    border-radius: 4px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border: 4px solid #cc5200; /* Orange frame */
+    margin-bottom: 0.5rem;
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+    display: block;
+    margin-top: 5px;
+}
+
+.intro-paragraph {
+    font-size: 1.15rem; /* Slightly larger text for the introduction */
+    line-height: 1.8;
+    text-align: justify;
+    font-weight: 600; /* Highlight the intro text */
+    margin-top: 0; /* Reset margin */
+}
+
+
+/* Desktop/Tablet (Side-by-Side Layout) */
+@media (min-width: 768px) {
+    .intro-image-wrapper {
+        flex-direction: row; /* Desktop: Image next to text */
+        align-items: flex-start; /* Align to the top */
+    }
+
+    .jivani-image-box {
+        flex-shrink: 0; /* Image should not shrink */
+        width: 300px; /* Fixed width for image on desktop */
+        margin: 0; /* Remove auto margin */
+    }
+}
+
+
+Yeh naya layout **`jivani_hanuman_nath.html`** mein image ko **side mein (desktop par)** aur **upar (mobile par)** place karke **Shraddhanath Ji site jaisa professional look** dega.
+
+Agar aapki site par **`style.css`** pehle se hi kaafi CSS code hai, toh yeh naye styles apply ho jayenge. Agar aapko koi aur section professional banana ho toh batao!
+
 
